@@ -31,18 +31,26 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'debug_toolbar',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_forms_bootstrap',
     'login',
     'website',
     'blog',
+    'tinymce',
+    'emoticons',
+    'threads',
 ]
 
+INTERNAL_IPS = ('127.0.0.1',)
+
 MIDDLEWARE_CLASSES = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -126,3 +134,15 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'home'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # During development only
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"), # static directory at the project level
+)
+
+#since adding this line my code is broke#
+
+# tinymce settings
+TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
+
+#since adding thi sline my code is broke#
+
