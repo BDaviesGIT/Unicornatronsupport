@@ -1,5 +1,7 @@
 import arrow
 from django import template
+from django.core.urlresolvers import reverse
+from django.utils.safestring import mark_safe
  
 register = template.Library()
  
@@ -8,7 +10,6 @@ def get_total_subject_posts(subject):
     total_posts = 0
     for thread in subject.threads.all():
         total_posts += thread.posts.count()
- 
     return total_posts
  
 @register.filter

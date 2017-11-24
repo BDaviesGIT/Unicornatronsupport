@@ -39,12 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
+    'threads',
     'login',
     'website',
     'blog',
     'tinymce',
     'emoticons',
-    'threads',
 ]
 
 INTERNAL_IPS = ('127.0.0.1',)
