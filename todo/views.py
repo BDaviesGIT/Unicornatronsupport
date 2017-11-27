@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -27,12 +27,12 @@ def details(request, id):
 def add(request):
     if(request.method == 'POST'):
         title = request.POST['title']
-        text = request.POST['text']
+        description = request.POST['description']
 
-        todo = Todo(title=title, text=text)
+        todo = Todo(title=title, description=description)
         todo.save()
 
-        return redirect('/todo')
+        return redirect('/todo/')
     else:
 		return render(request, 'add.html')
 

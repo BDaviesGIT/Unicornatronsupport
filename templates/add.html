@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Todo{% endblock %}
+
+{% block content %}
+
+<form action="{% url 'add' %}" method="post">
+{% csrf_token %}
+  <label for="title">Title</label><br />
+  <input type="text" name="title" id="title" />
+  <br>
+  <label for="description">description</label><br />
+  <textarea name="description" id="description"></textarea>
+  <br><br>
+  <input type="submit" value="Submit" />
+</form>
+<br>
+<a href="/todo"><< Go Back</a>
+
+
+{% endblock %}
+
