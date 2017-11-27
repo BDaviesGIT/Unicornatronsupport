@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Todo{% endblock %}
+
+{% block content %}
+
+  <h2>Todo list</h2>
+  <p> This section of the website allows users to view works currently being carried out by our development team and provides a status of each current task, either todo (status 1) doing (status 2) or done (status 3).</p>
+<hr>
+<ul>
+  {% for todo in todo %}
+    <li><a href="/todo/details/{{todo.id}}">{{todo.title}}</a>:   Status {{todo.status}}</li>
+      {% endfor %}
+</ul>
+
+<hr>
+
+
+{% endblock %}

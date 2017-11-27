@@ -36,7 +36,7 @@
         <div class="col-sm-10">
           <br>
             <center>
-               <h1> Unicornatron support site</h1>
+               <h1> Unicornatron- Support and development site</h1> 
                {% if user.is_authenticated %}
                Hi {{ user.username }}!
                  <a href="{% url 'logout' %}">logout</a> / <a href="{% url 'password_reset' %}">Password Reset</a>
@@ -57,8 +57,10 @@
       <div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
         <ul class="nav nav-pills nav-stacked">
         <li><a href='/'>Home</a></li>
+        <li><a href='/todo/'>Todo</a></li>
+        <li><a href='/idea'>Feature Request</a></li>
         <li><a href='/blog'>Blog</a></li>
-        <li><a href="/forum/">Forum</a></li>
+        <li><a href='/forum/'>Forum</a></li>
         <li><a href='/contact'>Contact</a></li>
         </ul>
       </div> <!--well bs-sidebar affix-->
@@ -76,7 +78,8 @@
 
   <footer>
     <div class="container-fluid" style='margin-left:15px'>
-      <p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
+      <p> Website by Ben Davies, 2017.</p>
+          <p>This website has been produced as a coursework assignment for part of the "Code Institute" online curriculum. I claim no ownership over any of the images, music or videos used as part of this website, which exists for educational purposes only.
     </div>
   </footer> 
   

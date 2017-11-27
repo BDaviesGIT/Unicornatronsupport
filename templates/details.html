@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Todo{% endblock %}
+
+{% block content %}
+
+  <a href="/todo"><< Go Back</a>
+  <br>
+  <h1>{{todo.title}}</h1>
+  <p>{{todo.description}}</p>
+  <p>Status {{todo.status}}<p>
+  <br>
+
+Updated on {{todo.updated}}
+
+
+{% endblock %}

@@ -2,8 +2,10 @@
 {% load thread_extras %}
 {% block content %}
     {% load bootstrap_tags %}
-
+    <P> Welcome to the Unicornatron Forums! This is a space for our community to discuss all things related to the unicornatron app. the fourms are divided into three sections: General chat for... you guessed it! General chat with other members of our community. Technical support and troubleshooting for support with issues. If your answer isn't already here then add a new post. Finally we have the App development section, containing all information for the development of our app, including community polls, so you can vote what features you want to see next.
+    </P>
     {% for subject in subjects %}
+
         <section class="subject">
             <h2><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
             <p>
@@ -16,7 +18,6 @@
         <table>
             <tr>
                 <th>THREADS</th>
-                <hr>
                 <th>POSTS</th>
             </tr>
             <tr>
@@ -24,6 +25,7 @@
                 <td>{{ subject|get_total_subject_posts }}</td>
             </tr>
         </table>
+        <hr>
         </section>
     {% endfor %}
 {% endblock %}

@@ -40,12 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
     'threads',
+    'todo',
+    'rest_framework',
     'login',
     'website',
     'blog',
     'tinymce',
     'emoticons',
     'polls',
+
 ]
 
 INTERNAL_IPS = ('127.0.0.1',)

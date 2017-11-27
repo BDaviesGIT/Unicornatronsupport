@@ -30,6 +30,9 @@ urlpatterns = [
         forum_views.delete_post, name='delete_post'),
 #polls    
     url(r'^thread/vote/(?P<thread_id>\d+)/(?P<subject_id>\d+)/$', forum_views.thread_vote, name='cast_vote'),
+#todo
+    url(r'^todo/', include('todo.urls')),
+
 ]
 
 if settings.DEBUG:
