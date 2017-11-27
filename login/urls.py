@@ -4,6 +4,9 @@ from django.contrib.auth import views as auth_views
 from django.views.generic.base import TemplateView
 from threads import views as forum_views
 from django.conf import settings
+from paypal.standard.ipn import urls as paypal_urls
+from paypalapp import views as paypal_views
+from products import views as product_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -32,7 +35,11 @@ urlpatterns = [
     url(r'^thread/vote/(?P<thread_id>\d+)/(?P<subject_id>\d+)/$', forum_views.thread_vote, name='cast_vote'),
 #todo
     url(r'^todo/', include('todo.urls')),
-
+#paypal    
+    url(r'^a-very-hard-to-guess-url/', include(paypal_urls)),
+    url(r'^paypal-return', paypal_views.paypal_return),
+    url(r'^paypal-cancel', paypal_views.paypal_cancel),
+    url(r'^products/$', product_views.all_products)
 ]
 
 if settings.DEBUG:

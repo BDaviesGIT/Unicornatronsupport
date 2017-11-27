@@ -48,6 +48,10 @@ INSTALLED_APPS = [
     'tinymce',
     'emoticons',
     'polls',
+    'paypal.standard.ipn',
+    'paypalapp',
+    'products',
+
 
 ]
 
@@ -149,4 +153,9 @@ STATICFILES_DIRS = (
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
 
 #since adding thi sline my code is broke#
+
+#django-paypal settings
+SITE_URL = 'http://127.0.0.1:8000'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = 'unicornatron@paypaltest1.com'
 
