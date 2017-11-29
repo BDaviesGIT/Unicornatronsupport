@@ -8,15 +8,27 @@
   <p> This section of the website allows users to view works currently being carried out by our development team and provides a status of each current task, either todo (status 1) doing (status 2) or done (status 3).</p>
   <p> Items without a status (status ) have been submitted by users and have not yet been accepted to enter production. A status will be applied to these once a item has been selected for inclusion into the app.
 <hr>
-<a href="/todo/add">Add Todo</a>
-<hr>
-<ul>
-  {% for todo in todo %}
-    <li><a href="/todo/details/{{todo.id}}">{{todo.title}}</a>:   Status {{todo.status}}</li>
-      {% endfor %}
-</ul>
 
-<hr>
+<a href="/todo/add" class="btn btn-primary">Add Todo</a>
 
+<br><br>
+
+<table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>status</th>
+            </tr>
+        </thead>
+        <tbody>
+              {% for todo in todo %}
+                <tr>
+                    <td><li><a href="/todo/details/{{todo.id}}">{{ todo.title }}</td>
+                    <td>{{ todo.status }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
 {% endblock %}
+

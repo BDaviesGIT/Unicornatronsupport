@@ -25,6 +25,10 @@
                     </tbody>
                 </table>
             </div>
+
+            <a href="/forum" class="btn btn-danger"> Go Back </a>
+            <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
+            <br><br>
             {% if thread.poll %}
                 <div class="container">
                     <div class="col-md-6">
@@ -59,16 +63,18 @@
 
             {% if user.is_authenticated %}
                 <p>
-                    <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
+
                 </p>
             {% endif %}
         </div>
     </div>
     <div class="container">
+        <div class="col-sm-12">
+        <hr>
         {% for post in thread.posts.all %}
             {# Include post.html each time with the associated post #}
             {% include "forum/post.html" with post=post %}
         {% endfor %}
+</div>
     </div>
-
 {% endblock %}

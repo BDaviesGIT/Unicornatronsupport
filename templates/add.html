@@ -6,16 +6,19 @@
 
 <form action="{% url 'add' %}" method="post">
 {% csrf_token %}
-  <label for="title">Title</label><br />
-  <input type="text" name="title" id="title" />
+  <label for="title" class = "col-lg-4 control-label">Title of feature</label> <br>
+  <input type="text" class = "form-control" name="title" id="title" placeholder="Your idea title here"/>
   <br>
-  <label for="description">description</label><br />
-  <textarea name="description" id="description"></textarea>
+
+  <label for="description" class = "col-lg-4 control-label">Description of feature </label> <br>
+  <br>
+  <textarea class ="form-control" name="description" id="description" placeholder="Description of your idea. Be as detailed as possible."></textarea>
   <br><br>
-  <input type="submit" value="Submit" />
+  <input type="submit" class="btn btn-success" value="Submit" />
 </form>
+
 <br>
-<a href="/todo"><< Go Back</a>
+<a href="/todo" class="btn btn-danger"> Go Back </a>
 
 
 {% endblock %}
