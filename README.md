@@ -18,10 +18,10 @@ The goal for this assignment is to produce a support and developement site for t
 - Login system with support for new users to register. Further to this, users are able to reset their passwords if required via e-mail link service.
 - Todo app. This displays a list of all current projects in development and provides a status update for each. Selecting the title of each task takes the user to a seperate details page where they can review the current task along with any additional notes related to the progress of the feature being reviewed. In the detail view, the user is provided with the date/ time when the feature's todo entry was last updated.
 If users want to request a new feature, they can do so via "add todo". This takes the user to a bootstrap form which when submitted, adds the requested task to the todo list. Once accepted, the admin can add a status and update the todo task entry.
--funding app allows admins to set payment options for tasks in the todo. Once added the app should list the new entry, price and provide a paypal link. Users can follow this link to donate towards their select app
--Blog app. As noted above, this allows users to view blog entries made by the dev team. No front end access to create blogs as this section is intended for admin use only. Users are to use the forums for communication etc.
--Forum app allowing users to communicate about various app topics. Also support for user and admin generated polls to guage community opinion regarding features to go into development etc.
--Site layout generated via django templating, allowing fast changes for future site updates.
+- Funding app allows admins to set payment options for tasks in the todo. Once added the app should list the new entry, price and provide a paypal link. Users can follow this link to donate towards their select app
+- Blog app. As noted above, this allows users to view blog entries made by the dev team. No front end access to create blogs as this section is intended for admin use only. Users are to use the forums for communication etc.
+- Forum app allowing users to communicate about various app topics. Also support for user and admin generated polls to guage community opinion regarding features to go into development etc.
+- Site layout generated via django jinja templating, allowing fast changes for future site updates.
 - page footer.
 
 ### Features Left to Implement
