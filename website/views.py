@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect
 from forms import SignUpForm
 
 def contact(request):
-    return render(request, 'website/basic.html',{'content':['If you would like to contact me, please email me.','fakeadmin@fake.com']})
+    return render(request, 'website/basic.html',{'content':['If you would like to contact our team directly, please email:','fakeadmin@fake.com', 'No Unicorns were harmed in the making of this website.']})
 
 
 def signup(request):

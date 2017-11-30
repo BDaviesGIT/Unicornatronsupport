@@ -1,5 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
+
+  <!--header image-->
+   <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+      <img src="../static/images/book.jpg" class="center-block img-responsive" style='max-height:500px;' alt="book">
+    </div>
+  </div>
+ </div> 
+
+<h2> Unicornatron Developer's blog </h2>
+<p> Welcome to the Unicornatron developer's blog. Here you will be able to find the latest in updates and announcements straight from the apps developer team. Please check back frequently as this section will be updated on a regular basis, as targets are met or if our dev team simply want to talk about what their current background music playlists for the week have been. </p>
+<p> To View a blog entry, simply click on the title. </p>
+<br>
+<hr>
+<h3> Blog Entries </h3>
 	{% for post in object_list %}
 		<h5>{{ post.date|date:"Y-m-d" }}<a href="/blog/{{post.id}}">  {{ post.title }}</a></h5>
 	{% endfor %}
