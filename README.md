@@ -25,10 +25,7 @@ If users want to request a new feature, they can do so via "add todo". This take
 - page footer.
 
 ### Features Left to Implement
-- Navbar shrink? (might leave as currently works quite well)
-- Flesh out site content.
-- additional images? Quite spartain atm though all features have been added
-- investigate forum poll bug (post button only works once polls have been filled. can untick after to post.)
+- Investigate forum poll bug. (Post button only works when users start a new thread with poll fields filled out. Can untick after to have post button work without a poll.)
 - E-mail link for password reset is not connected to a mail service.
 - Paypal links to sandbox paypal site.
 
